@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3025361523EF73A70032D982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025361423EF73A70032D982 /* AppDelegate.swift */; };
+		3025361723EF73A70032D982 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025361623EF73A70032D982 /* SceneDelegate.swift */; };
+		3025361923EF73A70032D982 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025361823EF73A70032D982 /* ContentView.swift */; };
+		3025361B23EF73AB0032D982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3025361A23EF73AB0032D982 /* Assets.xcassets */; };
+		3025361E23EF73AB0032D982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3025361D23EF73AB0032D982 /* Preview Assets.xcassets */; };
+		3025362123EF73AB0032D982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3025361F23EF73AB0032D982 /* LaunchScreen.storyboard */; };
+		3025362C23EF73AB0032D982 /* cortisolAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025362B23EF73AB0032D982 /* cortisolAnalyzerTests.swift */; };
+		3025363723EF73AB0032D982 /* cortisolAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025363623EF73AB0032D982 /* cortisolAnalyzerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3025362823EF73AB0032D982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3025360923EF73A70032D982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3025361023EF73A70032D982;
+			remoteInfo = cortisolAnalyzer;
+		};
+		3025363323EF73AB0032D982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3025360923EF73A70032D982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3025361023EF73A70032D982;
+			remoteInfo = cortisolAnalyzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3025361123EF73A70032D982 /* cortisolAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cortisolAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3025361423EF73A70032D982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3025361623EF73A70032D982 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3025361823EF73A70032D982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3025361A23EF73AB0032D982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3025361D23EF73AB0032D982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3025362023EF73AB0032D982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3025362223EF73AB0032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3025362723EF73AB0032D982 /* cortisolAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisolAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3025362B23EF73AB0032D982 /* cortisolAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisolAnalyzerTests.swift; sourceTree = "<group>"; };
+		3025362D23EF73AB0032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3025363223EF73AB0032D982 /* cortisolAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisolAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3025363623EF73AB0032D982 /* cortisolAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisolAnalyzerUITests.swift; sourceTree = "<group>"; };
+		3025363823EF73AB0032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3025360E23EF73A70032D982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3025362423EF73AB0032D982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3025362F23EF73AB0032D982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3025360823EF73A70032D982 = {
+			isa = PBXGroup;
+			children = (
+				3025361323EF73A70032D982 /* cortisolAnalyzer */,
+				3025362A23EF73AB0032D982 /* cortisolAnalyzerTests */,
+				3025363523EF73AB0032D982 /* cortisolAnalyzerUITests */,
+				3025361223EF73A70032D982 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3025361223EF73A70032D982 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3025361123EF73A70032D982 /* cortisolAnalyzer.app */,
+				3025362723EF73AB0032D982 /* cortisolAnalyzerTests.xctest */,
+				3025363223EF73AB0032D982 /* cortisolAnalyzerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3025361323EF73A70032D982 /* cortisolAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				3025361423EF73A70032D982 /* AppDelegate.swift */,
+				3025361623EF73A70032D982 /* SceneDelegate.swift */,
+				3025361823EF73A70032D982 /* ContentView.swift */,
+				3025361A23EF73AB0032D982 /* Assets.xcassets */,
+				3025361F23EF73AB0032D982 /* LaunchScreen.storyboard */,
+				3025362223EF73AB0032D982 /* Info.plist */,
+				3025361C23EF73AB0032D982 /* Preview Content */,
+			);
+			path = cortisolAnalyzer;
+			sourceTree = "<group>";
+		};
+		3025361C23EF73AB0032D982 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3025361D23EF73AB0032D982 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3025362A23EF73AB0032D982 /* cortisolAnalyzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3025362B23EF73AB0032D982 /* cortisolAnalyzerTests.swift */,
+				3025362D23EF73AB0032D982 /* Info.plist */,
+			);
+			path = cortisolAnalyzerTests;
+			sourceTree = "<group>";
+		};
+		3025363523EF73AB0032D982 /* cortisolAnalyzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3025363623EF73AB0032D982 /* cortisolAnalyzerUITests.swift */,
+				3025363823EF73AB0032D982 /* Info.plist */,
+			);
+			path = cortisolAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3025361023EF73A70032D982 /* cortisolAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3025363B23EF73AB0032D982 /* Build configuration list for PBXNativeTarget "cortisolAnalyzer" */;
+			buildPhases = (
+				3025360D23EF73A70032D982 /* Sources */,
+				3025360E23EF73A70032D982 /* Frameworks */,
+				3025360F23EF73A70032D982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cortisolAnalyzer;
+			productName = cortisolAnalyzer;
+			productReference = 3025361123EF73A70032D982 /* cortisolAnalyzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3025362623EF73AB0032D982 /* cortisolAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3025363E23EF73AB0032D982 /* Build configuration list for PBXNativeTarget "cortisolAnalyzerTests" */;
+			buildPhases = (
+				3025362323EF73AB0032D982 /* Sources */,
+				3025362423EF73AB0032D982 /* Frameworks */,
+				3025362523EF73AB0032D982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3025362923EF73AB0032D982 /* PBXTargetDependency */,
+			);
+			name = cortisolAnalyzerTests;
+			productName = cortisolAnalyzerTests;
+			productReference = 3025362723EF73AB0032D982 /* cortisolAnalyzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3025363123EF73AB0032D982 /* cortisolAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3025364123EF73AB0032D982 /* Build configuration list for PBXNativeTarget "cortisolAnalyzerUITests" */;
+			buildPhases = (
+				3025362E23EF73AB0032D982 /* Sources */,
+				3025362F23EF73AB0032D982 /* Frameworks */,
+				3025363023EF73AB0032D982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3025363423EF73AB0032D982 /* PBXTargetDependency */,
+			);
+			name = cortisolAnalyzerUITests;
+			productName = cortisolAnalyzerUITests;
+			productReference = 3025363223EF73AB0032D982 /* cortisolAnalyzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3025360923EF73A70032D982 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Rolling Thunder";
+				TargetAttributes = {
+					3025361023EF73A70032D982 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3025362623EF73AB0032D982 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3025361023EF73A70032D982;
+					};
+					3025363123EF73AB0032D982 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3025361023EF73A70032D982;
+					};
+				};
+			};
+			buildConfigurationList = 3025360C23EF73A70032D982 /* Build configuration list for PBXProject "cortisolAnalyzer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3025360823EF73A70032D982;
+			productRefGroup = 3025361223EF73A70032D982 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3025361023EF73A70032D982 /* cortisolAnalyzer */,
+				3025362623EF73AB0032D982 /* cortisolAnalyzerTests */,
+				3025363123EF73AB0032D982 /* cortisolAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3025360F23EF73A70032D982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3025362123EF73AB0032D982 /* LaunchScreen.storyboard in Resources */,
+				3025361E23EF73AB0032D982 /* Preview Assets.xcassets in Resources */,
+				3025361B23EF73AB0032D982 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3025362523EF73AB0032D982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3025363023EF73AB0032D982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3025360D23EF73A70032D982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3025361523EF73A70032D982 /* AppDelegate.swift in Sources */,
+				3025361723EF73A70032D982 /* SceneDelegate.swift in Sources */,
+				3025361923EF73A70032D982 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3025362323EF73AB0032D982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3025362C23EF73AB0032D982 /* cortisolAnalyzerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3025362E23EF73AB0032D982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3025363723EF73AB0032D982 /* cortisolAnalyzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3025362923EF73AB0032D982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3025361023EF73A70032D982 /* cortisolAnalyzer */;
+			targetProxy = 3025362823EF73AB0032D982 /* PBXContainerItemProxy */;
+		};
+		3025363423EF73AB0032D982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3025361023EF73A70032D982 /* cortisolAnalyzer */;
+			targetProxy = 3025363323EF73AB0032D982 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3025361F23EF73AB0032D982 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3025362023EF73AB0032D982 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3025363923EF73AB0032D982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3025363A23EF73AB0032D982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3025363C23EF73AB0032D982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"cortisolAnalyzer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = cortisolAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camppolyhacks.cortisolAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3025363D23EF73AB0032D982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"cortisolAnalyzer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = cortisolAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camppolyhacks.cortisolAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3025363F23EF73AB0032D982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = cortisolAnalyzerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camppolyhacks.cortisolAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cortisolAnalyzer.app/cortisolAnalyzer";
+			};
+			name = Debug;
+		};
+		3025364023EF73AB0032D982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = cortisolAnalyzerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camppolyhacks.cortisolAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cortisolAnalyzer.app/cortisolAnalyzer";
+			};
+			name = Release;
+		};
+		3025364223EF73AB0032D982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = cortisolAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camppolyhacks.cortisolAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cortisolAnalyzer;
+			};
+			name = Debug;
+		};
+		3025364323EF73AB0032D982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = cortisolAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camppolyhacks.cortisolAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cortisolAnalyzer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3025360C23EF73A70032D982 /* Build configuration list for PBXProject "cortisolAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3025363923EF73AB0032D982 /* Debug */,
+				3025363A23EF73AB0032D982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3025363B23EF73AB0032D982 /* Build configuration list for PBXNativeTarget "cortisolAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3025363C23EF73AB0032D982 /* Debug */,
+				3025363D23EF73AB0032D982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3025363E23EF73AB0032D982 /* Build configuration list for PBXNativeTarget "cortisolAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3025363F23EF73AB0032D982 /* Debug */,
+				3025364023EF73AB0032D982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3025364123EF73AB0032D982 /* Build configuration list for PBXNativeTarget "cortisolAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3025364223EF73AB0032D982 /* Debug */,
+				3025364323EF73AB0032D982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3025360923EF73A70032D982 /* Project object */;
+}
