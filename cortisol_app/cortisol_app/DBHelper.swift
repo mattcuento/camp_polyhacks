@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import SQLite3
 
 class Users{
