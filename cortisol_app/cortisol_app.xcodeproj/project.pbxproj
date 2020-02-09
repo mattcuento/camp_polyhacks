@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3025365123EF753A0032D982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025365023EF753A0032D982 /* AppDelegate.swift */; };
-		3025365323EF753A0032D982 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025365223EF753A0032D982 /* SceneDelegate.swift */; };
-		3025365523EF753A0032D982 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025365423EF753A0032D982 /* ContentView.swift */; };
-		3025365723EF753C0032D982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3025365623EF753C0032D982 /* Assets.xcassets */; };
-		3025365A23EF753C0032D982 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3025365923EF753C0032D982 /* Preview Assets.xcassets */; };
-		3025365D23EF753C0032D982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3025365B23EF753C0032D982 /* LaunchScreen.storyboard */; };
-		3025366823EF753D0032D982 /* cortisol_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025366723EF753D0032D982 /* cortisol_appTests.swift */; };
-		3025367323EF753D0032D982 /* cortisol_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025367223EF753D0032D982 /* cortisol_appUITests.swift */; };
+		3025368D23EF7BCE0032D982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025368C23EF7BCE0032D982 /* AppDelegate.swift */; };
+		3025368F23EF7BCE0032D982 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025368E23EF7BCE0032D982 /* SceneDelegate.swift */; };
+		3025369123EF7BCE0032D982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025369023EF7BCE0032D982 /* ViewController.swift */; };
+		3025369423EF7BCE0032D982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3025369223EF7BCE0032D982 /* Main.storyboard */; };
+		3025369623EF7BD00032D982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3025369523EF7BD00032D982 /* Assets.xcassets */; };
+		3025369923EF7BD00032D982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3025369723EF7BD00032D982 /* LaunchScreen.storyboard */; };
+		302536A423EF7BD00032D982 /* cortisol_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302536A323EF7BD00032D982 /* cortisol_appTests.swift */; };
+		302536AF23EF7BD00032D982 /* cortisol_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302536AE23EF7BD00032D982 /* cortisol_appUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3025366423EF753D0032D982 /* PBXContainerItemProxy */ = {
+		302536A023EF7BD00032D982 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3025364523EF753A0032D982 /* Project object */;
+			containerPortal = 3025368123EF7BCE0032D982 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3025364C23EF753A0032D982;
+			remoteGlobalIDString = 3025368823EF7BCE0032D982;
 			remoteInfo = cortisol_app;
 		};
-		3025366F23EF753D0032D982 /* PBXContainerItemProxy */ = {
+		302536AB23EF7BD00032D982 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3025364523EF753A0032D982 /* Project object */;
+			containerPortal = 3025368123EF7BCE0032D982 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3025364C23EF753A0032D982;
+			remoteGlobalIDString = 3025368823EF7BCE0032D982;
 			remoteInfo = cortisol_app;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3025364D23EF753A0032D982 /* cortisol_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cortisol_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3025365023EF753A0032D982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3025365223EF753A0032D982 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3025365423EF753A0032D982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3025365623EF753C0032D982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3025365923EF753C0032D982 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3025365C23EF753C0032D982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3025365E23EF753C0032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3025366323EF753D0032D982 /* cortisol_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisol_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3025366723EF753D0032D982 /* cortisol_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisol_appTests.swift; sourceTree = "<group>"; };
-		3025366923EF753D0032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3025366E23EF753D0032D982 /* cortisol_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisol_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3025367223EF753D0032D982 /* cortisol_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisol_appUITests.swift; sourceTree = "<group>"; };
-		3025367423EF753D0032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3025368923EF7BCE0032D982 /* cortisol_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cortisol_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3025368C23EF7BCE0032D982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3025368E23EF7BCE0032D982 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3025369023EF7BCE0032D982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3025369323EF7BCE0032D982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3025369523EF7BD00032D982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3025369823EF7BD00032D982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3025369A23EF7BD00032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3025369F23EF7BD00032D982 /* cortisol_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisol_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		302536A323EF7BD00032D982 /* cortisol_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisol_appTests.swift; sourceTree = "<group>"; };
+		302536A523EF7BD00032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		302536AA23EF7BD00032D982 /* cortisol_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisol_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		302536AE23EF7BD00032D982 /* cortisol_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisol_appUITests.swift; sourceTree = "<group>"; };
+		302536B023EF7BD00032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3025364A23EF753A0032D982 /* Frameworks */ = {
+		3025368623EF7BCE0032D982 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3025366023EF753D0032D982 /* Frameworks */ = {
+		3025369C23EF7BD00032D982 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3025366B23EF753D0032D982 /* Frameworks */ = {
+		302536A723EF7BD00032D982 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,62 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3025364423EF753A0032D982 = {
+		3025368023EF7BCE0032D982 = {
 			isa = PBXGroup;
 			children = (
-				3025364F23EF753A0032D982 /* cortisol_app */,
-				3025366623EF753D0032D982 /* cortisol_appTests */,
-				3025367123EF753D0032D982 /* cortisol_appUITests */,
-				3025364E23EF753A0032D982 /* Products */,
+				3025368B23EF7BCE0032D982 /* cortisol_app */,
+				302536A223EF7BD00032D982 /* cortisol_appTests */,
+				302536AD23EF7BD00032D982 /* cortisol_appUITests */,
+				3025368A23EF7BCE0032D982 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3025364E23EF753A0032D982 /* Products */ = {
+		3025368A23EF7BCE0032D982 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3025364D23EF753A0032D982 /* cortisol_app.app */,
-				3025366323EF753D0032D982 /* cortisol_appTests.xctest */,
-				3025366E23EF753D0032D982 /* cortisol_appUITests.xctest */,
+				3025368923EF7BCE0032D982 /* cortisol_app.app */,
+				3025369F23EF7BD00032D982 /* cortisol_appTests.xctest */,
+				302536AA23EF7BD00032D982 /* cortisol_appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3025364F23EF753A0032D982 /* cortisol_app */ = {
+		3025368B23EF7BCE0032D982 /* cortisol_app */ = {
 			isa = PBXGroup;
 			children = (
-				3025365023EF753A0032D982 /* AppDelegate.swift */,
-				3025365223EF753A0032D982 /* SceneDelegate.swift */,
-				3025365423EF753A0032D982 /* ContentView.swift */,
-				3025365623EF753C0032D982 /* Assets.xcassets */,
-				3025365B23EF753C0032D982 /* LaunchScreen.storyboard */,
-				3025365E23EF753C0032D982 /* Info.plist */,
-				3025365823EF753C0032D982 /* Preview Content */,
+				3025368C23EF7BCE0032D982 /* AppDelegate.swift */,
+				3025368E23EF7BCE0032D982 /* SceneDelegate.swift */,
+				3025369023EF7BCE0032D982 /* ViewController.swift */,
+				3025369223EF7BCE0032D982 /* Main.storyboard */,
+				3025369523EF7BD00032D982 /* Assets.xcassets */,
+				3025369723EF7BD00032D982 /* LaunchScreen.storyboard */,
+				3025369A23EF7BD00032D982 /* Info.plist */,
 			);
 			path = cortisol_app;
 			sourceTree = "<group>";
 		};
-		3025365823EF753C0032D982 /* Preview Content */ = {
+		302536A223EF7BD00032D982 /* cortisol_appTests */ = {
 			isa = PBXGroup;
 			children = (
-				3025365923EF753C0032D982 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		3025366623EF753D0032D982 /* cortisol_appTests */ = {
-			isa = PBXGroup;
-			children = (
-				3025366723EF753D0032D982 /* cortisol_appTests.swift */,
-				3025366923EF753D0032D982 /* Info.plist */,
+				302536A323EF7BD00032D982 /* cortisol_appTests.swift */,
+				302536A523EF7BD00032D982 /* Info.plist */,
 			);
 			path = cortisol_appTests;
 			sourceTree = "<group>";
 		};
-		3025367123EF753D0032D982 /* cortisol_appUITests */ = {
+		302536AD23EF7BD00032D982 /* cortisol_appUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3025367223EF753D0032D982 /* cortisol_appUITests.swift */,
-				3025367423EF753D0032D982 /* Info.plist */,
+				302536AE23EF7BD00032D982 /* cortisol_appUITests.swift */,
+				302536B023EF7BD00032D982 /* Info.plist */,
 			);
 			path = cortisol_appUITests;
 			sourceTree = "<group>";
@@ -139,13 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3025364C23EF753A0032D982 /* cortisol_app */ = {
+		3025368823EF7BCE0032D982 /* cortisol_app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3025367723EF753D0032D982 /* Build configuration list for PBXNativeTarget "cortisol_app" */;
+			buildConfigurationList = 302536B323EF7BD00032D982 /* Build configuration list for PBXNativeTarget "cortisol_app" */;
 			buildPhases = (
-				3025364923EF753A0032D982 /* Sources */,
-				3025364A23EF753A0032D982 /* Frameworks */,
-				3025364B23EF753A0032D982 /* Resources */,
+				3025368523EF7BCE0032D982 /* Sources */,
+				3025368623EF7BCE0032D982 /* Frameworks */,
+				3025368723EF7BCE0032D982 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -153,69 +145,69 @@
 			);
 			name = cortisol_app;
 			productName = cortisol_app;
-			productReference = 3025364D23EF753A0032D982 /* cortisol_app.app */;
+			productReference = 3025368923EF7BCE0032D982 /* cortisol_app.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3025366223EF753D0032D982 /* cortisol_appTests */ = {
+		3025369E23EF7BD00032D982 /* cortisol_appTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3025367A23EF753D0032D982 /* Build configuration list for PBXNativeTarget "cortisol_appTests" */;
+			buildConfigurationList = 302536B623EF7BD00032D982 /* Build configuration list for PBXNativeTarget "cortisol_appTests" */;
 			buildPhases = (
-				3025365F23EF753D0032D982 /* Sources */,
-				3025366023EF753D0032D982 /* Frameworks */,
-				3025366123EF753D0032D982 /* Resources */,
+				3025369B23EF7BD00032D982 /* Sources */,
+				3025369C23EF7BD00032D982 /* Frameworks */,
+				3025369D23EF7BD00032D982 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3025366523EF753D0032D982 /* PBXTargetDependency */,
+				302536A123EF7BD00032D982 /* PBXTargetDependency */,
 			);
 			name = cortisol_appTests;
 			productName = cortisol_appTests;
-			productReference = 3025366323EF753D0032D982 /* cortisol_appTests.xctest */;
+			productReference = 3025369F23EF7BD00032D982 /* cortisol_appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3025366D23EF753D0032D982 /* cortisol_appUITests */ = {
+		302536A923EF7BD00032D982 /* cortisol_appUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3025367D23EF753D0032D982 /* Build configuration list for PBXNativeTarget "cortisol_appUITests" */;
+			buildConfigurationList = 302536B923EF7BD00032D982 /* Build configuration list for PBXNativeTarget "cortisol_appUITests" */;
 			buildPhases = (
-				3025366A23EF753D0032D982 /* Sources */,
-				3025366B23EF753D0032D982 /* Frameworks */,
-				3025366C23EF753D0032D982 /* Resources */,
+				302536A623EF7BD00032D982 /* Sources */,
+				302536A723EF7BD00032D982 /* Frameworks */,
+				302536A823EF7BD00032D982 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3025367023EF753D0032D982 /* PBXTargetDependency */,
+				302536AC23EF7BD00032D982 /* PBXTargetDependency */,
 			);
 			name = cortisol_appUITests;
 			productName = cortisol_appUITests;
-			productReference = 3025366E23EF753D0032D982 /* cortisol_appUITests.xctest */;
+			productReference = 302536AA23EF7BD00032D982 /* cortisol_appUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3025364523EF753A0032D982 /* Project object */ = {
+		3025368123EF7BCE0032D982 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Rolling Thunder";
 				TargetAttributes = {
-					3025364C23EF753A0032D982 = {
+					3025368823EF7BCE0032D982 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					3025366223EF753D0032D982 = {
+					3025369E23EF7BD00032D982 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 3025364C23EF753A0032D982;
+						TestTargetID = 3025368823EF7BCE0032D982;
 					};
-					3025366D23EF753D0032D982 = {
+					302536A923EF7BD00032D982 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 3025364C23EF753A0032D982;
+						TestTargetID = 3025368823EF7BCE0032D982;
 					};
 				};
 			};
-			buildConfigurationList = 3025364823EF753A0032D982 /* Build configuration list for PBXProject "cortisol_app" */;
+			buildConfigurationList = 3025368423EF7BCE0032D982 /* Build configuration list for PBXProject "cortisol_app" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,37 +215,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 3025364423EF753A0032D982;
-			productRefGroup = 3025364E23EF753A0032D982 /* Products */;
+			mainGroup = 3025368023EF7BCE0032D982;
+			productRefGroup = 3025368A23EF7BCE0032D982 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3025364C23EF753A0032D982 /* cortisol_app */,
-				3025366223EF753D0032D982 /* cortisol_appTests */,
-				3025366D23EF753D0032D982 /* cortisol_appUITests */,
+				3025368823EF7BCE0032D982 /* cortisol_app */,
+				3025369E23EF7BD00032D982 /* cortisol_appTests */,
+				302536A923EF7BD00032D982 /* cortisol_appUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3025364B23EF753A0032D982 /* Resources */ = {
+		3025368723EF7BCE0032D982 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3025365D23EF753C0032D982 /* LaunchScreen.storyboard in Resources */,
-				3025365A23EF753C0032D982 /* Preview Assets.xcassets in Resources */,
-				3025365723EF753C0032D982 /* Assets.xcassets in Resources */,
+				3025369923EF7BD00032D982 /* LaunchScreen.storyboard in Resources */,
+				3025369623EF7BD00032D982 /* Assets.xcassets in Resources */,
+				3025369423EF7BCE0032D982 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3025366123EF753D0032D982 /* Resources */ = {
+		3025369D23EF7BD00032D982 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3025366C23EF753D0032D982 /* Resources */ = {
+		302536A823EF7BD00032D982 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,52 +255,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3025364923EF753A0032D982 /* Sources */ = {
+		3025368523EF7BCE0032D982 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3025365123EF753A0032D982 /* AppDelegate.swift in Sources */,
-				3025365323EF753A0032D982 /* SceneDelegate.swift in Sources */,
-				3025365523EF753A0032D982 /* ContentView.swift in Sources */,
+				3025369123EF7BCE0032D982 /* ViewController.swift in Sources */,
+				3025368D23EF7BCE0032D982 /* AppDelegate.swift in Sources */,
+				3025368F23EF7BCE0032D982 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3025365F23EF753D0032D982 /* Sources */ = {
+		3025369B23EF7BD00032D982 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3025366823EF753D0032D982 /* cortisol_appTests.swift in Sources */,
+				302536A423EF7BD00032D982 /* cortisol_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3025366A23EF753D0032D982 /* Sources */ = {
+		302536A623EF7BD00032D982 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3025367323EF753D0032D982 /* cortisol_appUITests.swift in Sources */,
+				302536AF23EF7BD00032D982 /* cortisol_appUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3025366523EF753D0032D982 /* PBXTargetDependency */ = {
+		302536A123EF7BD00032D982 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3025364C23EF753A0032D982 /* cortisol_app */;
-			targetProxy = 3025366423EF753D0032D982 /* PBXContainerItemProxy */;
+			target = 3025368823EF7BCE0032D982 /* cortisol_app */;
+			targetProxy = 302536A023EF7BD00032D982 /* PBXContainerItemProxy */;
 		};
-		3025367023EF753D0032D982 /* PBXTargetDependency */ = {
+		302536AC23EF7BD00032D982 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3025364C23EF753A0032D982 /* cortisol_app */;
-			targetProxy = 3025366F23EF753D0032D982 /* PBXContainerItemProxy */;
+			target = 3025368823EF7BCE0032D982 /* cortisol_app */;
+			targetProxy = 302536AB23EF7BD00032D982 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3025365B23EF753C0032D982 /* LaunchScreen.storyboard */ = {
+		3025369223EF7BCE0032D982 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3025365C23EF753C0032D982 /* Base */,
+				3025369323EF7BCE0032D982 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3025369723EF7BD00032D982 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3025369823EF7BD00032D982 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3025367523EF753D0032D982 /* Debug */ = {
+		302536B123EF7BD00032D982 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		3025367623EF753D0032D982 /* Release */ = {
+		302536B223EF7BD00032D982 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,13 +430,11 @@
 			};
 			name = Release;
 		};
-		3025367823EF753D0032D982 /* Debug */ = {
+		302536B423EF7BD00032D982 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"cortisol_app/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = cortisol_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,13 +447,11 @@
 			};
 			name = Debug;
 		};
-		3025367923EF753D0032D982 /* Release */ = {
+		302536B523EF7BD00032D982 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"cortisol_app/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = cortisol_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,7 +464,7 @@
 			};
 			name = Release;
 		};
-		3025367B23EF753D0032D982 /* Debug */ = {
+		302536B723EF7BD00032D982 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -489,7 +485,7 @@
 			};
 			name = Debug;
 		};
-		3025367C23EF753D0032D982 /* Release */ = {
+		302536B823EF7BD00032D982 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -510,7 +506,7 @@
 			};
 			name = Release;
 		};
-		3025367E23EF753D0032D982 /* Debug */ = {
+		302536BA23EF7BD00032D982 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -529,7 +525,7 @@
 			};
 			name = Debug;
 		};
-		3025367F23EF753D0032D982 /* Release */ = {
+		302536BB23EF7BD00032D982 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -551,43 +547,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3025364823EF753A0032D982 /* Build configuration list for PBXProject "cortisol_app" */ = {
+		3025368423EF7BCE0032D982 /* Build configuration list for PBXProject "cortisol_app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3025367523EF753D0032D982 /* Debug */,
-				3025367623EF753D0032D982 /* Release */,
+				302536B123EF7BD00032D982 /* Debug */,
+				302536B223EF7BD00032D982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3025367723EF753D0032D982 /* Build configuration list for PBXNativeTarget "cortisol_app" */ = {
+		302536B323EF7BD00032D982 /* Build configuration list for PBXNativeTarget "cortisol_app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3025367823EF753D0032D982 /* Debug */,
-				3025367923EF753D0032D982 /* Release */,
+				302536B423EF7BD00032D982 /* Debug */,
+				302536B523EF7BD00032D982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3025367A23EF753D0032D982 /* Build configuration list for PBXNativeTarget "cortisol_appTests" */ = {
+		302536B623EF7BD00032D982 /* Build configuration list for PBXNativeTarget "cortisol_appTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3025367B23EF753D0032D982 /* Debug */,
-				3025367C23EF753D0032D982 /* Release */,
+				302536B723EF7BD00032D982 /* Debug */,
+				302536B823EF7BD00032D982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3025367D23EF753D0032D982 /* Build configuration list for PBXNativeTarget "cortisol_appUITests" */ = {
+		302536B923EF7BD00032D982 /* Build configuration list for PBXNativeTarget "cortisol_appUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3025367E23EF753D0032D982 /* Debug */,
-				3025367F23EF753D0032D982 /* Release */,
+				302536BA23EF7BD00032D982 /* Debug */,
+				302536BB23EF7BD00032D982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3025364523EF753A0032D982 /* Project object */;
+	rootObject = 3025368123EF7BCE0032D982 /* Project object */;
 }
