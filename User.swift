@@ -15,8 +15,11 @@ class User{
     private var password: String
     private var firstName: String
     private var lastName: String
-    //private var reports: [Report]
-    //private var activities: [Activity]
+    
+    /* For Further Development
+    private var dailyReport: Report
+    private var monthlyReport: Report
+    private var yearlyReport: Report*/
     
     // Default Constructor
     init(id: Int64, email: String, password: String, firstName: String, lastName: String){
@@ -25,11 +28,6 @@ class User{
         self.password = password
         self.firstName = firstName
         self.lastName = lastName
-        //let day = Report(self.id, 1) //TODO add parameters
-        //let week = Report(self.id, 1) //TODO add parameters
-        //let month = Report(self.id, 1) //TODO add parameters
-        //self.reports = [day, week, month]
-        //self.activities = readActivities(self.id) //TODO check
     }
     
     // Getter Functions

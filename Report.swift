@@ -26,7 +26,7 @@ class Report{
         self.min_cort = min_cort
         self.view_type = view_type
     }
-    
+    // Getter Methods
     func getId() -> Int {
         return self.id
     }
@@ -46,7 +46,7 @@ class Report{
     func getViewType() -> Int {
         return self.view_type
     }
-    
+    // Setter Methods
     func setMaxCort(max: Double) {
         self.max_cort = max
         return
@@ -89,4 +89,5 @@ class Report{
         return formatter.string(from: startDate)
     }
     
+    // 
 }
