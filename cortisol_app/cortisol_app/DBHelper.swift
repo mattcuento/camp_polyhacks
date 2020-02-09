@@ -173,22 +173,6 @@ class DBHelper
         return activities
     }
     
-    func deleteByID(id:Int) {
-        let deleteStatementStirng = "DELETE FROM users WHERE id = ?;"
-        var deleteStatement: OpaquePointer? = nil
-        if sqlite3_prepare_v2(db, deleteStatementStirng, -1, &deleteStatement, nil) == SQLITE_OK {
-            sqlite3_bind_int(deleteStatement, 1, Int32(id))
-            if sqlite3_step(deleteStatement) == SQLITE_DONE {
-                print("Successfully deleted row.")
-            } else {
-                print("Could not delete row.")
-            }
-        } else {
-            print("DELETE statement could not be prepared")
-        }
-        sqlite3_finalize(deleteStatement)
-    }
-    
     func getThreeActivities(viewType: Int, positivity: Int, user_id:Int) -> [Activity]{
         //TODO fix date here
         var order = "desc"
@@ -252,5 +236,51 @@ class DBHelper
         }
         sqlite3_finalize(queryStatement2)
         return limits
+    }
+    
+    func stressDateQuery(user_id: Int, stress: Int, view_type: Int, date: Date) -> String {
+        var option = "max"
+        var option2 = "desc"
+        if stress == 1 {
+            option = "min"
+            option2 = "asc"
+        }
+        let today = Date()
+        var date = Calendar.current.date(bySettingHour: 0, minute: 0, second: 1, of: today)!
+        switch view_type {
+        case 1:
+            date = Calendar.current.date(bySettingHour: 0, minute: 0, second: 1, of: today)!
+            //grab max cortisol entry with todays date
+            //day
+        case 2:
+            date = Calendar.current.date(byAdding: .day, value: -7, to: today)!
+            //grab max cortisol entry with this week
+            //week
+        case 3:
+            date = Calendar.current.date(byAdding: .month, value: -1, to: today)!
+            //grab max cortisol entry with this month
+            //month
+        default:
+            //not sure
+            date = Calendar.current.date(bySettingHour: 0, minute: 0, second: 1, of: today)!
+        }
+        let stressDateString = "select date_recorded, \(option)(cort_level) from cortisolLevels where date_recorded >= \(date) order by cort_level \(option2);"
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        var date_recorded = df.string(from: Date())
+        var queryStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, stressDateString, -1, &queryStatement, nil) == SQLITE_OK {
+            if sqlite3_step(queryStatement) == SQLITE_ROW {
+                date_recorded = String(describing: String(cString: sqlite3_column_text(queryStatement, 0)))
+                print("Query Result:")
+                print("\(date_recorded)")
+            } else {
+                print("Date not collected.")
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+        }
+        sqlite3_finalize(queryStatement)
+        return date_recorded
     }
 }
