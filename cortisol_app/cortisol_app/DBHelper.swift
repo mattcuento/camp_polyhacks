@@ -45,8 +45,8 @@ class DBHelper
     }
     
     func createTable() {
-        let cortisolLevelsTable = "create table if not exists cortisolLevels (id int primary key, time_recorded varchar(50), day_recorded varchar(50), cort_level double, heart_rate int, activity int, report_id int);"
-        let activitiesTable = "create table if not exists activities (id int primary key, activity varchar(80), positivity boolean);"
+        let cortisolLevelsTable = "create table if not exists cortisolLevels (id int primary key, time_recorded varchar(50), day_recorded varchar(50), cort_level double, heart_rate int, activity_num int, report_id int);"
+        let activitiesTable = "create table if not exists activities (id int primary key, activity_name varchar(80), positivity boolean);"
         let sevenDayReportsTable = "create table if not exists sevenDayReports(id int primary key, cort_avg double, num_peaks int);"
         let reportMetas = "create table if not exists reportMetas(id int primary key, descriptor varchar(80));"
         let cortisolLevelsArchive = "create table if not exists cortisolLevelsArchive(id int primary key, archive_id int, time_recorded varchar(50), day_recorded varchar(50), cort_level double, heart_rate int, activity int, report_id int);"
@@ -61,7 +61,7 @@ class DBHelper
                 {
                     print("Table created.")
                 } else {
-                    print("Table not be created.")
+                    print("Table not created.")
                 }
             } else {
                 print("CREATE TABLE statement could not be prepared.")
@@ -101,6 +101,32 @@ class DBHelper
         }
         sqlite3_finalize(insertStatement)
     }
+   
+    func insertActivities(id:Int, activity_name: String, positivity: Int) {
+           let activities = readActivities()
+           for actvs in activities
+           {
+            if actvs.getName() == activity_name
+               {
+                   return
+               }
+           }
+           let insertStatementString = "INSERT INTO activities (id, activity_name, positivity) VALUES (?, ?, ?);"
+           var insertStatement: OpaquePointer? = nil
+           if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+               sqlite3_bind_int(insertStatement, 1, Int32(id))
+               sqlite3_bind_text(insertStatement, 2, (activity_name as NSString).utf8String, -1, nil)
+            sqlite3_bind_int(insertStatement, 3, Int32(positivity))
+               if sqlite3_step(insertStatement) == SQLITE_DONE {
+                   print("Successfully inserted row.")
+               } else {
+                   print("Could not insert row.")
+               }
+           } else {
+               print("INSERT statement could not be prepared.")
+           }
+           sqlite3_finalize(insertStatement)
+       }
     
     func readUsers() -> [User] {
         let queryStatementString = "SELECT * FROM users;"
@@ -125,6 +151,26 @@ class DBHelper
         return usrs
     }
     
+    func readActivities() -> [Activity] {
+        let queryStatementString = "SELECT * FROM activities;"
+        var queryStatement: OpaquePointer? = nil
+        var activities : [Activity] = []
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = sqlite3_column_int(queryStatement, 0)
+                let activity_name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let positivity = sqlite3_column_int(queryStatement, 2)
+                activities.append(Activity(isPositive: Bool(truncating: positivity as NSNumber), name: activity_name, id: Int64(id)))
+                print("Query Result:")
+                print("\(id) | \(activity_name) | \(positivity)")
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+        }
+        sqlite3_finalize(queryStatement)
+        return activities
+    }
+    
     func deleteByID(id:Int) {
         let deleteStatementStirng = "DELETE FROM users WHERE id = ?;"
         var deleteStatement: OpaquePointer? = nil
@@ -140,4 +186,54 @@ class DBHelper
         }
         sqlite3_finalize(deleteStatement)
     }
+    
+    func getThreeActivities(viewType: Int, positivity: Int) -> [Activity]{
+        //TODO fix date here
+        var order = "desc"
+        var pos = true
+        if positivity == 0 {
+            order = "asc"
+            pos = false
+        }
+        let getThreeQuery = "select activity_num, activity_name, count(*) from cortisolLevels, activities where rownum < 4 and activity_num = activities.id and positivity = \(positivity) group by activity_num order by count(*) \(order);"
+        var queryStatement: OpaquePointer? = nil
+        //person
+        var activities: [Activity] = []
+        if sqlite3_prepare_v2(db, getThreeQuery, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let activity_num = sqlite3_column_int(queryStatement, 0)
+                let activity_name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let frequency = sqlite3_column_int(queryStatement, 2)
+                activities.append(Activity(isPositive: pos, name: activity_name, id: Int64(activity_num)))
+                print("Query Result:")
+            print("\(activity_num) | \(activity_name) | \(frequency)")
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+        }
+        sqlite3_finalize(queryStatement)
+        return activities
+        
+    }
+}
+
+
+//1 day, 2 week, 3 month
+func translateToTime(viewType: Int) {
+    switch viewType {
+    case 1:
+        return
+        //translate to day
+        // Date "2/9/2020 00:00"
+    case 2:
+        return
+        //translate to week
+        // Date "2/2/2020 20:24"
+    case 3:
+        return
+        //month
+    default:
+        return
+    }
+    return
 }
