@@ -13,11 +13,11 @@ class Report{
         let date: String
         let cort_level: Double
     }
-    private var id: Int
+    private var id: Int // SQL
     private var user_id: Int
     private var max_cort: Double
     private var min_cort: Double
-    private var view_type: Int
+    private var view_type: Int // 1 = day, 2 = week, 3 = month
     private var threeMostStress: [Activity]
     private var threeLeastStress: [Activity]
     private var stressHighDate: String?

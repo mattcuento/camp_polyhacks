@@ -47,3 +47,10 @@ class Activity{
         self.user_id = id
     }
 }
+
+// Equatable method (Basically Swift's version of .equals)
+extension Activity: Equatable {
+    static func == (lhs: Activity, rhs: Activity) -> Bool{
+        return (lhs.getUserId() == rhs.getUserId()) && (lhs.getIsPositive() == rhs.getIsPositive()) && (lhs.getActivityName() == rhs.getActivityName())
+    }
+}

@@ -62,11 +62,13 @@ class User{
     func setLastName(lastName: String){
         self.lastName = lastName
     }
-    // Equatable method (Basically Swift's version of .equals)
-    /*extension User: Equatable {
-        static func == (lhs: User, rhs: User) -> Bool{
-            
-        }
-    }*/
     
+    
+}
+// Equatable method (Basically Swift's version of .equals)
+extension User: Equatable {
+    static func == (lhs: User, rhs: User) -> Bool{
+        return (lhs.getId() == rhs.getId()) && (lhs.getEmail() == rhs.getEmail()) &&
+            (lhs.getPassword() == rhs.getPassword()) && (lhs.getFirstName() == rhs.getFirstName()) && (lhs.getLastName() == rhs.getLastName())
+    }
 }
