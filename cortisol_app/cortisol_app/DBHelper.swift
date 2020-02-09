@@ -45,14 +45,14 @@ class DBHelper
     }
     
     func createTable() {
-        let cortisolLevelsTable = "create table if not exists cortisolLevels (id int primary key, time_recorded varchar(50), day_recorded varchar(50), cort_level double, heart_rate int, activity_num int, report_id int);"
-        let activitiesTable = "create table if not exists activities (id int primary key, activity_name varchar(80), positivity boolean);"
-        let sevenDayReportsTable = "create table if not exists sevenDayReports(id int primary key, cort_avg double, num_peaks int);"
-        let reportMetas = "create table if not exists reportMetas(id int primary key, descriptor varchar(80));"
-        let cortisolLevelsArchive = "create table if not exists cortisolLevelsArchive(id int primary key, archive_id int, time_recorded varchar(50), day_recorded varchar(50), cort_level double, heart_rate int, activity int, report_id int);"
-        let sevenDayReportArchives = "create table if not exists sevenDayReportsArchive(id int primary key, archive_id int, cort_avg double, num_peaks int);"
+        let cortisolLevelsTable = "create table if not exists cortisolLevels (id int primary key, user_id int, cort_level double, activity_num int, date_recorded varchar(50));"
+        let activitiesTable = "create table if not exists activities (id int primary key, activity_name varchar(80), positivity int, user_id int);"
+        let reportsTable = "create table if not exists reports(id int primary key, max_cort double, min_cort double, view_type int);"
+        let reportMetasTable = "create table if not exists reportMetas(id int primary key, descriptor varchar(30));"
+        let cortisolLevelsArchiveTable = "create table if not exists cortisolLevelsArchive (id int primary key, user_id int, cort_level double, activity_num int, date_recorded varchar(50));"
+        let reportsArchiveTable = "create table if not exists reportsArchive(id int primary key, max_cort double, min_cort double, view_type int);"
         let usersTable = "create table if not exists Users(int id primary key, email varchar(80), fname varchar(50), lname varchar(80), password varchar(100));"
-        let tableCreation: [String] = [cortisolLevelsTable, activitiesTable, sevenDayReportsTable, reportMetas, cortisolLevelsArchive, sevenDayReportArchives, usersTable]
+        let tableCreation: [String] = [cortisolLevelsTable, activitiesTable, reportsTable, reportMetasTable, cortisolLevelsArchiveTable, reportsArchiveTable, usersTable]
         for currentQuery in tableCreation {
             var createTableStatement: OpaquePointer? = nil
             if sqlite3_prepare_v2(db, currentQuery, -1, &createTableStatement, nil) == SQLITE_OK
@@ -102,11 +102,11 @@ class DBHelper
         sqlite3_finalize(insertStatement)
     }
    
-    func insertActivities(id:Int, activity_name: String, positivity: Int) {
+    func insertActivities(id:Int, activity_name: String, positivity: Int, user_id: Int) {
            let activities = readActivities()
            for actvs in activities
            {
-            if actvs.getName() == activity_name
+            if actvs.getActivityName() == activity_name
                {
                    return
                }
@@ -116,7 +116,8 @@ class DBHelper
            if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
                sqlite3_bind_int(insertStatement, 1, Int32(id))
                sqlite3_bind_text(insertStatement, 2, (activity_name as NSString).utf8String, -1, nil)
-            sqlite3_bind_int(insertStatement, 3, Int32(positivity))
+                sqlite3_bind_int(insertStatement, 3, Int32(positivity))
+                sqlite3_bind_int(insertStatement, 4, Int32(user_id))
                if sqlite3_step(insertStatement) == SQLITE_DONE {
                    print("Successfully inserted row.")
                } else {
@@ -160,9 +161,10 @@ class DBHelper
                 let id = sqlite3_column_int(queryStatement, 0)
                 let activity_name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
                 let positivity = sqlite3_column_int(queryStatement, 2)
-                activities.append(Activity(isPositive: Bool(truncating: positivity as NSNumber), name: activity_name, id: Int64(id)))
+                let user_id = sqlite3_column_int(queryStatement, 3)
+                activities.append(Activity(is_positive: Int(positivity), name: activity_name, id: Int(id), user_id: Int(user_id)))
                 print("Query Result:")
-                print("\(id) | \(activity_name) | \(positivity)")
+                print("\(id) | \(activity_name) | \(positivity) | \(user_id)")
             }
         } else {
             print("SELECT statement could not be prepared")
@@ -187,24 +189,21 @@ class DBHelper
         sqlite3_finalize(deleteStatement)
     }
     
-    func getThreeActivities(viewType: Int, positivity: Int) -> [Activity]{
+    func getThreeActivities(viewType: Int, positivity: Int, user_id:Int) -> [Activity]{
         //TODO fix date here
         var order = "desc"
-        var pos = true
         if positivity == 0 {
             order = "asc"
-            pos = false
         }
         let getThreeQuery = "select activity_num, activity_name, count(*) from cortisolLevels, activities where rownum < 4 and activity_num = activities.id and positivity = \(positivity) group by activity_num order by count(*) \(order);"
         var queryStatement: OpaquePointer? = nil
-        //person
         var activities: [Activity] = []
         if sqlite3_prepare_v2(db, getThreeQuery, -1, &queryStatement, nil) == SQLITE_OK {
             while sqlite3_step(queryStatement) == SQLITE_ROW {
                 let activity_num = sqlite3_column_int(queryStatement, 0)
                 let activity_name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
                 let frequency = sqlite3_column_int(queryStatement, 2)
-                activities.append(Activity(isPositive: pos, name: activity_name, id: Int64(activity_num)))
+                activities.append(Activity(is_positive: positivity, name: activity_name, id: Int(activity_num), user_id: user_id))
                 print("Query Result:")
             print("\(activity_num) | \(activity_name) | \(frequency)")
             }
@@ -213,27 +212,45 @@ class DBHelper
         }
         sqlite3_finalize(queryStatement)
         return activities
-        
     }
-}
-
-
-//1 day, 2 week, 3 month
-func translateToTime(viewType: Int) {
-    switch viewType {
-    case 1:
-        return
-        //translate to day
-        // Date "2/9/2020 00:00"
-    case 2:
-        return
-        //translate to week
-        // Date "2/2/2020 20:24"
-    case 3:
-        return
-        //month
-    default:
-        return
+    
+    func computeMaxMinCortLvls(viewType: Int, id: Int) -> [String:Double] {
+        //TODO fix date here
+        let getMaxString = "select max(cort_level) from cortisolLevels where user_id = \(id);"
+        let getMinString = "select min(cort_level) from cortisolLevels where user_id = \(id);"
+        var queryStatement: OpaquePointer? = nil
+        var limits = [String: Double]()
+        if sqlite3_prepare_v2(db, getMaxString, -1, &queryStatement, nil) == SQLITE_OK {
+            if sqlite3_step(queryStatement) == SQLITE_ROW {
+                let max = sqlite3_column_double(queryStatement, 0)
+                limits["max"] = max
+                print("Query Result:")
+                print("\(max)")
+            } else {
+                print("Max not collected.")
+                exit(EXIT_FAILURE)
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+            exit(EXIT_FAILURE)
+        }
+        sqlite3_finalize(queryStatement)
+        var queryStatement2: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, getMinString, -1, &queryStatement2, nil) == SQLITE_OK {
+            if sqlite3_step(queryStatement2) == SQLITE_ROW {
+                let min = sqlite3_column_double(queryStatement2, 0)
+                limits["min"] = min
+                print("Query Result:")
+                print("\(min)")
+            } else {
+                print("Min not collected.")
+                exit(EXIT_FAILURE)
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+            exit(EXIT_FAILURE)
+        }
+        sqlite3_finalize(queryStatement2)
+        return limits
     }
-    return
 }
