@@ -56,4 +56,37 @@ class Report{
         self.min_cort = min
         return
     }
+    
+    // Convert Type Data Method and associated helper methods.
+    func convertTypeData(viewType: Int) -> String{
+        switch viewType{
+        case 1:
+            return convertHelperOne()
+        case 2:
+            return convertHelperTwo()
+        case 3:
+            return convertHelperThree()
+        default:
+            return "Error: Unrecognized ViewType"
+        }
+    }
+    func convertHelperOne() -> String{
+        let startDate = Date(timeIntervalSinceNow: -86400)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
+        return formatter.string(from: startDate)
+    }
+    func convertHelperTwo() -> String{
+        let startDate = Date(timeIntervalSinceNow: -604800)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
+        return formatter.string(from: startDate)
+    }
+    func convertHelperThree() -> String{
+        let startDate = Date(timeIntervalSinceNow: -2419200)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
+        return formatter.string(from: startDate)
+    }
+    
 }
