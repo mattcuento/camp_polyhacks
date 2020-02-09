@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30170FCF23EFC5EE00BA38F4 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30170FCE23EFC5EE00BA38F4 /* Activity.swift */; };
+		30170FD123EFC5F200BA38F4 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30170FD023EFC5F100BA38F4 /* Report.swift */; };
+		30170FD323EFC5F500BA38F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30170FD223EFC5F500BA38F4 /* User.swift */; };
 		3025368D23EF7BCE0032D982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025368C23EF7BCE0032D982 /* AppDelegate.swift */; };
 		3025368F23EF7BCE0032D982 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025368E23EF7BCE0032D982 /* SceneDelegate.swift */; };
 		3025369123EF7BCE0032D982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3025369023EF7BCE0032D982 /* ViewController.swift */; };
@@ -15,6 +18,7 @@
 		3025369923EF7BD00032D982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3025369723EF7BD00032D982 /* LaunchScreen.storyboard */; };
 		302536A423EF7BD00032D982 /* cortisol_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302536A323EF7BD00032D982 /* cortisol_appTests.swift */; };
 		302536AF23EF7BD00032D982 /* cortisol_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302536AE23EF7BD00032D982 /* cortisol_appUITests.swift */; };
+		302536BD23EFBAA30032D982 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302536BC23EFBAA30032D982 /* DBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30170FCE23EFC5EE00BA38F4 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = ../../../../Desktop/Activity.swift; sourceTree = "<group>"; };
+		30170FD023EFC5F100BA38F4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Report.swift; path = ../../../../Desktop/Report.swift; sourceTree = "<group>"; };
+		30170FD223EFC5F500BA38F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../Desktop/User.swift; sourceTree = "<group>"; };
 		3025368923EF7BCE0032D982 /* cortisol_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cortisol_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3025368C23EF7BCE0032D982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3025368E23EF7BCE0032D982 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		302536AA23EF7BD00032D982 /* cortisol_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cortisol_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		302536AE23EF7BD00032D982 /* cortisol_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cortisol_appUITests.swift; sourceTree = "<group>"; };
 		302536B023EF7BD00032D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		302536BC23EFBAA30032D982 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,17 @@
 		3025368B23EF7BCE0032D982 /* cortisol_app */ = {
 			isa = PBXGroup;
 			children = (
+				30170FCE23EFC5EE00BA38F4 /* Activity.swift */,
+				30170FD023EFC5F100BA38F4 /* Report.swift */,
+				30170FD223EFC5F500BA38F4 /* User.swift */,
 				3025368C23EF7BCE0032D982 /* AppDelegate.swift */,
 				3025368E23EF7BCE0032D982 /* SceneDelegate.swift */,
 				3025369023EF7BCE0032D982 /* ViewController.swift */,
 				3025369223EF7BCE0032D982 /* Main.storyboard */,
-				3025369523EF7BD00032D982 /* Assets.xcassets */,
 				3025369723EF7BD00032D982 /* LaunchScreen.storyboard */,
+				3025369523EF7BD00032D982 /* Assets.xcassets */,
 				3025369A23EF7BD00032D982 /* Info.plist */,
+				302536BC23EFBAA30032D982 /* DBHelper.swift */,
 			);
 			path = cortisol_app;
 			sourceTree = "<group>";
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30170FCF23EFC5EE00BA38F4 /* Activity.swift in Sources */,
 				3025369123EF7BCE0032D982 /* ViewController.swift in Sources */,
 				3025368D23EF7BCE0032D982 /* AppDelegate.swift in Sources */,
 				3025368F23EF7BCE0032D982 /* SceneDelegate.swift in Sources */,
+				302536BD23EFBAA30032D982 /* DBHelper.swift in Sources */,
+				30170FD123EFC5F200BA38F4 /* Report.swift in Sources */,
+				30170FD323EFC5F500BA38F4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

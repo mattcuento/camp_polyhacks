@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  cortisol_app
 //
-//  Created by jamie jenkins on 2/8/20.
+//  Created by Matt Cuento on 2/8/20.
 //  Copyright © 2020 Rolling Thunder. All rights reserved.
 //
 
