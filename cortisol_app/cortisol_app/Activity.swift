@@ -11,13 +11,13 @@ import Foundation
 class Activity{
     private var isPositive: Bool // Indicates whether Activity is positive or negative.
     private var name: String
-    private var cortisolLevel: Double
+    private var id: Int64
     
     //Default Constructor
-    init(isPositive: Bool, name: String, cortisolLevel: Double){
+    init(isPositive: Bool, name: String, id: Int64){
         self.isPositive = isPositive
         self.name = name
-        self.cortisolLevel = cortisolLevel
+        self.id = id
     }
     
     // Getter Functions
@@ -27,8 +27,8 @@ class Activity{
     func getName() -> String{
         return self.name;
     }
-    func getCortisolLevel() -> Double{
-        return self.cortisolLevel
+    func getId() -> Int64{
+        return self.id
     }
     
     // Setter Fubnctions
@@ -36,9 +36,14 @@ class Activity{
         self.isPositive = isPositive
     }
     
-    func setCortisolLevel(cortisolLevel: Double){
-        self.cortisolLevel = cortisolLevel
+    func setId(id: Int64){
+        self.id = id
     }
     
 }
 
+extension Activity: Equatable{
+    static func == (lhs: Activity, rhs: Activity) -> Bool{
+        return (lhs.getIsPositive == rhs.getIsPositive) && (lhs.getName == rhs.getName) && (lhs.getId == rhs.getId)
+    }
+}
